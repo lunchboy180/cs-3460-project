@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/Slitherer.dir/link.d CMakeFiles/Slitherer.dir/src/main.cpp.o -o Slitherer
