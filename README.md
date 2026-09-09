@@ -9,8 +9,8 @@ A02331901
 A02331901@aggies.usu.edu
 
 Matthew Harrison
-A
-@aggies.usu.edu
+A02359710
+A02359710@aggies.usu.edu
 
 Jonah Stringfellow
 A
