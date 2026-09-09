@@ -20,7 +20,8 @@ Jonah Stringfellow
 Run the `build.sh` file or run 
 ```
 cmake -S ./ -B build
+cmake --build build
 ```
 
 ## Run instructions
-Run the executable created by the build process
+Run the binary under `build/Slitherer`
