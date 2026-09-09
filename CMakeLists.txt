@@ -4,4 +4,4 @@ project(Crawler)
 
 add_executable(Crawler main.cpp)
 
-set_property(TARGET HelloWorld PROPERTY CXX_STANDARD 20)
+set_property(TARGET Crawler PROPERTY CXX_STANDARD 20)
