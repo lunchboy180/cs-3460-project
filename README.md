@@ -11,14 +11,14 @@ Matthew Harrison
 * A02359710
 * A02359710@aggies.usu.edu
 
-Jonah Stringfellow
+Jonah Stringfellow (Team Leader)
 * A02444988
 * a02444988@aggies.usu.edu
 
 
 ## Build instructions
 Run the `build.sh` file or run 
-```
+```terminal
 cmake -S ./ -B build
 cmake --build build
 ```
