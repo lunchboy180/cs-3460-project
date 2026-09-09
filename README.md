@@ -13,8 +13,8 @@ A02359710
 A02359710@aggies.usu.edu
 
 Jonah Stringfellow
-A
-@aggies.usu.edu
+A02444988
+a02444988@aggies.usu.edu
 
 
 
