@@ -1,6 +1,6 @@
 #include <iostream>
 
 int main() {
-    std::cout << "This program prints a message." << std::endl;
+    std::cout << "This program slithers." << std::endl;
     return 0;
 }
