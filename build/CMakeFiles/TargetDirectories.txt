@@ -1,3 +1,0 @@
-/home/jonah/Projects/cs-3460-project/build/CMakeFiles/Slitherer.dir
-/home/jonah/Projects/cs-3460-project/build/CMakeFiles/edit_cache.dir
-/home/jonah/Projects/cs-3460-project/build/CMakeFiles/rebuild_cache.dir
