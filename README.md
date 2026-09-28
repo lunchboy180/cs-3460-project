@@ -17,11 +17,9 @@ Jonah Stringfellow (Team Leader)
 
 
 ## Build instructions
-Run the `build.sh` file or run 
-```terminal
-cmake -S ./ -B build
-cmake --build build
-```
+Warning: builds only currently tested on linux
+Run the `build.sh` script
+there are errors in the code right now so it doesn't properly compile, but the build system works
 
 ## Run instructions
 Run the binary under `build/Slitherer`
