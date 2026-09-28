@@ -1,3 +1,9 @@
+#include "github_client.h"
+
+#include <cstdlib>
+#include <string>
+#include <httplib.h>
+
 httplib::Client client("https://api.github.com");
 
 std::string path = 
