@@ -17,7 +17,17 @@ void RepositoryStore::print(const std::vector<Repository>& repositories) const {
 void RepositoryStore::save(const std::vector<Repository>& repositories, const std::string& path) const {
     nlohmann::json output = nlohmann::json::array();
     for (const auto& repository : repositories) {
-        output.push_back(repository_to_json(repository));
+        output.push_back({
+            {"owner", repository.owner},
+            {"name", repository.name},
+            {"description", repository.description},
+            {"stars", repository.stars},
+            {"forks", repository.forks},
+            {"language", repository.language},
+            {"size", repository.size},
+            {"updated_at", repository.updated_at},
+            {"url", repository.url}
+        });
     }
 
     std::ofstream output_file(path);
