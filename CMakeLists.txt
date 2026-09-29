@@ -31,7 +31,7 @@ include(cmake/OpenSSL.cmake)
 
 add_executable(Slitherer
     src/main.cpp
-
+	src/github_client.cpp
 )
 
 target_link_libraries(Slitherer PRIVATE

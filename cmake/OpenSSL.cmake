@@ -26,6 +26,9 @@ if(WIN32)
         )
     endif()
 
+    find_program(PERL_EXECUTABLE perl REQUIRED)
+    find_program(NMAKE_EXECUTABLE nmake REQUIRED)
+
     set(OPENSSL_SSL_LIBRARY
         "${OPENSSL_INSTALL_DIR}/lib/libssl.lib"
     )
@@ -35,6 +38,7 @@ if(WIN32)
     )
 
     set(OPENSSL_CONFIGURE_COMMAND
+        "${PERL_EXECUTABLE}"
         "${OPENSSL_SOURCE_DIR}/Configure"
     )
 
@@ -47,11 +51,12 @@ if(WIN32)
     )
 
     set(OPENSSL_BUILD_COMMAND
-        nmake
+        "${NMAKE_EXECUTABLE}"
     )
 
     set(OPENSSL_INSTALL_COMMAND
-        nmake install_sw
+        "${NMAKE_EXECUTABLE}"
+        install_sw
     )
 
 elseif(UNIX AND NOT APPLE)
