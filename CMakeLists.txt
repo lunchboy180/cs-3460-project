@@ -14,6 +14,9 @@ find_package(nlohmann_json CONFIG REQUIRED)
 
 add_executable(Slitherer
     src/main.cpp
+    src/github_client.cpp
+    src/repository_parser.cpp
+    src/repository_store.cpp
 )
 
 target_link_libraries(Slitherer PRIVATE
