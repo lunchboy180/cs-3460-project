@@ -21,5 +21,12 @@ Warning: builds only currently tested on linux
 Run the `build.sh` script
 there are errors in the code right now so it doesn't properly compile, but the build system works
 
+Windows:
+cmake --preset vcpkg-windows
+cmake --build --preset vcpkg-windows-release
+
 ## Run instructions
 Run the binary under `build/Slitherer`
+
+Windows:
+Run the executable in `build-vcpkg/Release`
