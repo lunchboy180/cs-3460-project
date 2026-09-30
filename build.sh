@@ -1,24 +1,13 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -e
 
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-BUILD_DIR="${ROOT_DIR}/build"
+if [ -z "$VCPKG_ROOT" ]; then
+    echo "Error: VCPKG_ROOT is not set."
+    echo "Example:"
+    echo "  export VCPKG_ROOT=\$HOME/vcpkg"
+    exit 1
+fi
 
-echo "==> Configuring Slitherer"
-
-cmake \
-    -S "${ROOT_DIR}" \
-    -B "${BUILD_DIR}" \
-    -DCMAKE_BUILD_TYPE=Release
-
-echo "==> Building Slitherer"
-
-cmake \
-    --build "${BUILD_DIR}" \
-    --config Release \
-    --parallel
-
-echo
-echo "==> Build complete"
-echo "Executable: ${BUILD_DIR}/bin/Slitherer"
+cmake --preset default
+cmake --build --preset default

@@ -17,13 +17,11 @@ Jonah Stringfellow (Team Leader)
 
 
 ## Build instructions
-Warning: builds only currently tested on linux  
+vcpkg needs to be installed to build!  
 Run the `build.sh` script  
-there are errors in the code right now so it doesn't properly compile, but the build system works
 
 Windows:  
-cmake --preset vcpkg-windows  
-cmake --build --preset vcpkg-windows-release
+Run the `build.bat` script  
 
 ## Run instructions
 Run the binary under `build/Slitherer`

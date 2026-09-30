@@ -1,0 +1,11 @@
+{
+  "name": "slitherer",
+  "version-string": "1.0.0",
+  "dependencies": [
+    {
+      "name": "cpp-httplib",
+      "features": ["openssl"]
+    },
+    "nlohmann-json"
+  ]
+}
