@@ -1,0 +1,22 @@
+{
+    "version": 6,
+    "configurePresets": [
+        {
+            "name": "vcpkg-windows",
+            "displayName": "Windows with vcpkg",
+            "generator": "Visual Studio 18 2026",
+            "binaryDir": "${sourceDir}/build-vcpkg",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+                "VCPKG_TARGET_TRIPLET": "x64-windows"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "vcpkg-windows-release",
+            "configurePreset": "vcpkg-windows",
+            "configuration": "Release"
+        }
+    ]
+}
