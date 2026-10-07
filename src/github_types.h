@@ -16,6 +16,13 @@ struct Repository {
     std::string url;
 };
 
+struct AnalysisOptions {
+    std::uint64_t min_stars{};
+    std::string language; // empty means any language
+    std::string sort_key{"stars"};
+    std::size_t top_n{10};
+};
+
 struct SearchOptions {
     std::string query;
     std::size_t count{100};
