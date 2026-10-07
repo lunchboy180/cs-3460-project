@@ -17,7 +17,9 @@ Jonah Stringfellow (Team Leader)
 
 
 ## Build instructions
-vcpkg needs to be installed to build!  
+`vcpkg`, `ninja`, and their dependencies need to be installed to build!  
+
+Linux:  
 Run the `build.sh` script  
 
 Windows:  
