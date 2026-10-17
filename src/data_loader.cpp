@@ -1,5 +1,11 @@
 #include "data_loader.h"
 
+#include <nlohmann/json.hpp>
+
+#include <fstream>
+#include <stdexcept>
+#include <utility>
+
 std::vector<Repository>
 load_repositories(const std::filesystem::path& path) {
     std::ifstream input(path);
