@@ -2,6 +2,7 @@
 #include "data_loader.h"
 #include "exporter.h"
 #include "repository_parser.h"
+#include "repository_analyzer.h"
 #include "repository_store.h"
 
 #include <filesystem>
