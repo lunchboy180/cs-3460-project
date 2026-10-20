@@ -13,11 +13,13 @@ find_package(httplib CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
 
 add_executable(Slitherer
-    src/data_loader.cpp
     src/main.cpp
+    src/data_loader.cpp
+    src/exporter.cpp
     src/github_client.cpp
     src/repository_parser.cpp
     src/repository_store.cpp
+    src/repository_analyzer.cpp
 )
 
 target_link_libraries(Slitherer PRIVATE
