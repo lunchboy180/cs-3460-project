@@ -79,7 +79,7 @@ int run_analysis(int argc, char* argv[]) {
                          "       Slitherer --slither [query] [count]\n";
             return 0;
         } else {
-            throw std::invalid_argument("unknown option: " + argument);
+            throw std::invalid_argument("unknown option: " + argument + "\nuse --help for help");
         }
     }
 
