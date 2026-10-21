@@ -17,7 +17,8 @@ Jonah Stringfellow (Team Leader)
 
 
 ## Build instructions
-`vcpkg`, `ninja`, and their dependencies need to be installed to build!  
+`vcpkg`, `ninja`, and their dependencies need to be installed to build. The Windows
+script initializes the Visual Studio C++ build environment automatically.
 
 Linux:  
 Run the `build.sh` script  

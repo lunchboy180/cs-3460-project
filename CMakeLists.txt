@@ -11,6 +11,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(httplib CONFIG REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
+find_package(OpenSSL REQUIRED)
 
 add_executable(Slitherer
     src/main.cpp
@@ -25,4 +26,8 @@ add_executable(Slitherer
 target_link_libraries(Slitherer PRIVATE
     httplib::httplib
     nlohmann_json::nlohmann_json
+    OpenSSL::SSL
+    OpenSSL::Crypto
 )
+
+target_compile_definitions(Slitherer PRIVATE CPPHTTPLIB_OPENSSL_SUPPORT)
