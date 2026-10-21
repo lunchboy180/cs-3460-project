@@ -4,7 +4,6 @@
 #include <nlohmann/json.hpp>
 
 #include <iostream>
-#include <stdexcept>
 #include <utility>
 
 bool matches_filters(const Repository& r,
@@ -61,16 +60,19 @@ bool compare_by_updated(const Repository& a, const Repository& b) {
     return a.name < b.name;
 }
 
-if (options.sort_key == "stars") {
-    std::sort(rows.begin(), rows.end(), compare_by_stars);
-}
-else if (options.sort_key == "forks") {
-    std::sort(rows.begin(), rows.end(), compare_by_forks);
-}
-else if (options.sort_key == "updated") {
-    std::sort(rows.begin(), rows.end(), compare_by_updated);
-}
+void sort_repositories(const std::vector<Repository>& input,
+                       const AnalysisOptions& options) {
+    if (options.sort_key == "stars") {
+        std::sort(rows.begin(), rows.end(), compare_by_stars);
+    }
+    else if (options.sort_key == "forks") {
+        std::sort(rows.begin(), rows.end(), compare_by_forks);
+    }
+    else if (options.sort_key == "updated") {
+        std::sort(rows.begin(), rows.end(), compare_by_updated);
+    }
 
-if (rows.size() > options.top_n) {
-    rows.resize(options.top_n);
+    if (rows.size() > options.top_n) {
+        rows.resize(options.top_n);
+    }
 }
