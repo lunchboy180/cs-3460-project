@@ -73,12 +73,8 @@ sort_repositories(const std::vector<Repository>& input,
     else if (options.sort_key == "updated") {
         std::sort(rows.begin(), rows.end(), compare_by_updated);
     }
-
     if (rows.size() > options.top_n) {
         rows.resize(options.top_n);
     }
-    // for (const Repository& r : rows) {
-    //     std::cout << "buh: " << r << '\n';
-    // }
     return rows;
 }
