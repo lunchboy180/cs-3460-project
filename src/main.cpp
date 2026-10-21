@@ -85,14 +85,15 @@ int run_analysis(int argc, char* argv[]) {
 
     const auto repositories = load_repositories(input_path);
     const auto selected = filter_repositories(repositories, options);
+    const auto sorted = sort_repositories(selected, options);
     std::cout << "Dataset: " << input_path.string() << '\n';
     std::cout << "Repositories loaded: " << repositories.size() << '\n';
     std::cout << "Filter: stars >= " << options.min_stars << '\n';
     std::cout << "Language: " << (options.language.empty() ? "any" : options.language) << '\n';
     std::cout << "Sort: " << options.sort_key << " (descending)\n";
     std::cout << "Top N: " << options.top_n << '\n';
-    export_repositories(selected, output_path);
-    report_repositories(selected, output_path);
+    export_repositories(sorted, output_path);
+    report_repositories(sorted, output_path);
     return 0;
 }
 }

@@ -60,8 +60,10 @@ bool compare_by_updated(const Repository& a, const Repository& b) {
     return a.name < b.name;
 }
 
-void sort_repositories(const std::vector<Repository>& input,
+std::vector<Repository>
+sort_repositories(const std::vector<Repository>& input,
                        const AnalysisOptions& options) {
+    std::vector<Repository> rows = input;
     if (options.sort_key == "stars") {
         std::sort(rows.begin(), rows.end(), compare_by_stars);
     }
@@ -75,4 +77,8 @@ void sort_repositories(const std::vector<Repository>& input,
     if (rows.size() > options.top_n) {
         rows.resize(options.top_n);
     }
+    // for (const Repository& r : rows) {
+    //     std::cout << "buh: " << r << '\n';
+    // }
+    return rows;
 }
