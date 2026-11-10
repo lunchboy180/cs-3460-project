@@ -65,7 +65,14 @@ int run_analysis(int argc, char* argv[]) {
         } else if (argument == "--language") {
             options.language = require_value(argument);
         } else if (argument == "--sort") {
-            options.sort_key = require_value(argument);
+            const auto sort_key = require_value(argument);
+            if (sort_key != "stars" &&
+                sort_key != "forks" &&
+                sort_key != "updated") {
+                throw std::invalid_argument(
+                    "sort must be one of: stars, forks, updated");
+            }
+            options.sort_key = sort_key;
         } else if (argument == "--top-n") {
             const auto top_n = parse_unsigned(require_value(argument), "top-n");
             if (top_n > std::numeric_limits<std::size_t>::max()) {
